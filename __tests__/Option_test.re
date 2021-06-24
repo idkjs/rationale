@@ -2,7 +2,7 @@ open Jest;
 
 open Expect;
 
-open Option;
+open !Option;
 
 test("some", () =>
   switch (some(1)) {
@@ -154,7 +154,7 @@ describe("Functor", () => {
 describe("Alternative", () => {
   test("neutral element left side", () => {
     let u = Some(10);
-    
+
     expect(empty() <|> u) |> toBe(u)
   });
   test("neutral element right side", () => {

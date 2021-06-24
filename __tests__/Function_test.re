@@ -49,7 +49,6 @@ describe("throttle", () => {
     throttle(
       () => {
         num := num^ + 1;
-        num;
       },
       300,
     );
